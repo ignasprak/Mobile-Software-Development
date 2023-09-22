@@ -1,11 +1,22 @@
+/*
+ *  TITLE: People Education Records
+ *  AUTHOR: Ignas Prakapas (c20424992)
+ *  DESCRIPTION: This is a program made to go over the basics of OOP, this involve the four pillars of
+ *  OOP. In this program there is a dynamic object system for both the person class and the student 
+ *  subclass. 
+ */
+
 import java.util.Scanner;
-
-
 
 public class Main {
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
 
+        System.out.println("Hello and welcome to the People Education system!");
+        System.out.println("In the next message, you will have to specify how many people you are inserting,");
+        System.out.println("and then how many students you will be inserting.");
+        System.out.println();
+        
         // user input for the number of people and students
         System.out.println("Enter the number of people:");
         int numPeople = input.nextInt();
@@ -21,6 +32,7 @@ public class Main {
         // this loop is for which people object data is being "edited"
         for (int i = 0; i < numPeople; i++) {
 
+            System.out.println();
             // name input
             System.out.println("Enter details for Person " + (i + 1) + ":");
 
@@ -30,7 +42,9 @@ public class Main {
         }
 
         for (int i = 0; i < numStudents; i++) {
-           // name input
+
+            System.out.println();
+            // name input
             System.out.println("Enter details for Student " + (i + 1) + ":");
 
             // storing person in an array
@@ -40,11 +54,13 @@ public class Main {
         System.out.println("\nRecord of people: ");
         for (Person person : people) {
             System.out.println(person.toString());
+            System.out.println();
         }
 
         System.out.println("\nRecord of students: ");
         for (Student student : students) {
             System.out.println(student.toString());
+            System.out.println();
         }
 
         System.out.println();
@@ -55,6 +71,7 @@ public class Main {
     }
 
     public static Person inputPerson(Scanner input) {
+
         System.out.println();
         System.out.println("Please input your name: ");
         String name = input.nextLine();            
@@ -63,6 +80,7 @@ public class Main {
 
         // gender input validation loop
         do {
+            System.out.println();
             System.out.println("Please input your gender as M(Male), F(Female) or U(Universal)");
             String genderInput = input.next();
             gender = genderInput.charAt(0);
@@ -81,6 +99,7 @@ public class Main {
     }   
 
     public static Student inputStudent(Scanner input) {
+
         System.out.println();
         System.out.println("Please input your name: ");
         String name = input.nextLine();            
@@ -88,14 +107,17 @@ public class Main {
         char gender;
 
         // gender input validation loop
-        do {
+        do {   
+            System.out.println();
             System.out.println("Please input your gender as M(Male), F(Female) or U(Universal)");
             String genderInput = input.next();
             gender = genderInput.charAt(0);
-            input.nextLine(); // consume the newline character
+            // consume the newline character
+            input.nextLine(); 
 
             if (gender == 'M' || gender == 'F' || gender == 'U' || gender == 'm' || gender == 'f' || gender == 'u') {
-                break; // if valid input, exit
+                // if valid input, exit
+                break; 
             } 
             
             else {
@@ -111,6 +133,7 @@ public class Main {
         System.out.println("Please input your course code: ");
         String courseCode = input.nextLine();    
 
+        System.out.println();
         return new Student(name, gender, studentID, courseCode);
     }  
 }

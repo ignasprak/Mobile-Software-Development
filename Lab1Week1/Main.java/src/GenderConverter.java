@@ -1,4 +1,5 @@
-/* This is a class made to convert a char from the gender variable into a string,
+/* 
+* This is a class made to convert a char from the gender variable into a string,
 * so it would be easier to read when reading the final output of the program
 */
 
@@ -8,18 +9,18 @@ public class GenderConverter {
         switch (genderChar) {
             case 'M':
             case 'm':
-                gender = "\"Male\"";
+                gender = "MALE";
                 break;
             case 'F':
             case 'f':
-                gender = "\"Female\"";
+                gender = "FEMALE";
                 break;
             case 'U':
             case 'u':
-                gender = "\"Universal\"";
+                gender = "UNIVERSAL";
                 break;
             default:
-                gender = "\"Unknown\"";
+                gender = "UNKNOWN";
         }
         return gender;
     }
