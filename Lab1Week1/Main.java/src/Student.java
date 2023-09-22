@@ -25,8 +25,8 @@ public class Student extends Person implements PublishDetails {
     @Override
     public String toString() {
         return super.toString() +  
-        "\n, their student ID is: " + studentID + 
-        " and their course code is: " + courseCode;
+        "\nStudent ID: " + studentID + 
+        "\nCourse code: " + courseCode;
     }
 
     @Override
