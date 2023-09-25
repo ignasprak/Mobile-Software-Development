@@ -1,4 +1,5 @@
 public class Person {
+    
     private String name;
     private char gender;
 
@@ -26,5 +27,9 @@ public class Person {
 
     public void setGender(char gender) {
         this.gender = gender; 
+    }
+
+    public String toString() {
+        return "Name: " + name + "\nGender: " + GenderConverter.convertCharToGender(gender);
     }
 }
