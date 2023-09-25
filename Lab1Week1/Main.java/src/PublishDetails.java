@@ -1,6 +1,6 @@
 // my interfaces file
 
-public interface PublishDetails {
+interface PublishDetails {
     void confirmDetails();
     String getCourseCode();
 }

@@ -48,7 +48,8 @@ public class Main {
             System.out.println("Enter details for Student " + (i + 1) + ":");
 
             // storing person in an array
-            students[i] = inputStudent(input);        }
+            students[i] = inputStudent(input);       
+        }
 
         // data about all created objects
         System.out.println("\nRecord of people: ");
@@ -65,9 +66,24 @@ public class Main {
 
         System.out.println();
 
+        // checking using isntanceof 
+        
+            // Check if object Person is of the expected type
+            for (int i = 0; i < numPeople; i++) {
+                if ((i < numPeople && people[i] instanceof Person)) {
+                System.out.println("An object exists for Person: " + (i + 1));
+                }
+            }
+
+            // Check if object Student is of the expected type
+            for (int i = 0; i < numStudents; i++) {
+                if ((i < numStudents && students[i] instanceof Student)) {
+                System.out.println("An object exists for Student: " + (i + 1));
+                }
+            }
+
         // closing the scanner input
         input.close();
-
     }
 
     public static Person inputPerson(Scanner input) {
@@ -126,7 +142,7 @@ public class Main {
         } while (true);
 
         System.out.println();
-        System.out.println("Please input your student number: ");
+        System.out.println("You are being given a Student Number: ");
         String studentID = input.nextLine();    
 
         System.out.println();
@@ -135,7 +151,14 @@ public class Main {
 
         System.out.println();
         return new Student(name, gender, studentID, courseCode);
+
     }  
 }
+
+/*
+ * I added in the instance of thing
+ * I added the student records thing
+ * Added finishing touches
+ */
 
 
