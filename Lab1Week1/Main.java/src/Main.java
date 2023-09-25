@@ -155,10 +155,5 @@ public class Main {
     }  
 }
 
-/*
- * I added in the instance of thing
- * I added the student records thing
- * Added finishing touches
- */
 
 
